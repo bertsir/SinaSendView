@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/iv_dialog_sina_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+    <ImageButton
+        android:id="@+id/ib_dialog_sina_close"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/dialog_sina_send_close"
+        android:background="@null"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="17dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_gray"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_sina_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        
+        <LinearLayout
+            android:id="@+id/ll_dialog_sina_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/dialog_sina_send_write"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_gray"
+                android:text="一般内容"
+                android:layout_marginTop="8dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_dialog_sina_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            >
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/dialog_sina_send_time"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_gray"
+                android:text="时间胶囊"
+                android:layout_marginTop="8dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_dialog_sina_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/dialog_sina_send_map"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_gray"
+                android:text="地点胶囊"
+                android:layout_marginTop="8dp"
+
+                />
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/iv_dialog_sina_des"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dialog_sina_send_des"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        />
+
+</FrameLayout>
