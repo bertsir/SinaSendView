@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -65,13 +66,23 @@ public class SinaSendView extends Dialog {
     private void initView() {
         setBrulBg();
         ll_dialog_sina_menu.setVisibility(View.VISIBLE);
-        ll_dialog_sina_menu.setAnimation(AnimationUtil.moveToViewLocationFromTop());
+        AnimationUtil.startAnimationSetAt2Bottom(ll_dialog_sina_menu);
+        ib_dialog_sina_close.setVisibility(View.VISIBLE);
+        ib_dialog_sina_close.setAnimation(AnimationUtil.rotateSelfRight());
         ib_dialog_sina_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ll_dialog_sina_menu.setAnimation(AnimationUtil.moveToViewBottom());
+                AnimationUtil.startAnimationSetAt2Top(ll_dialog_sina_menu);
                 ll_dialog_sina_menu.setVisibility(View.GONE);
-                dismiss();
+                ib_dialog_sina_close.setAnimation(AnimationUtil.rotateSelfLeft());
+                ib_dialog_sina_close.setVisibility(View.GONE);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dismiss();
+                    }
+                },500);
             }
         });
         if(hideDes){
